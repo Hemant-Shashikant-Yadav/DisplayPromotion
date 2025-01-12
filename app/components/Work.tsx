@@ -1,32 +1,85 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ExternalLink, Code, Paintbrush, Globe } from 'lucide-react';
+import { ExternalLink, Code, Globe, Smartphone } from 'lucide-react';
 
 const projects = [
+  // Digital Marketing Projects
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800',
-    description: 'A modern e-commerce platform with seamless payment integration.',
+    title: 'Shivjal',
+    category: 'Digital Marketing',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    description: 'Comprehensive digital marketing strategy and social media management for tech solutions.',
     icon: <Globe className="w-6 h-6" />
   },
   {
     id: 2,
-    title: 'Brand Identity',
-    category: 'Design',
-    image: 'https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&q=80&w=800',
-    description: 'Complete brand identity design for a tech startup.',
-    icon: <Paintbrush className="w-6 h-6" />
+    title: 'Muktai Textile',
+    category: 'Digital Marketing',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=800',
+    description: 'Digital presence enhancement and social media marketing for fashion industry.',
+    icon: <Globe className="w-6 h-6" />
   },
   {
     id: 3,
-    title: 'Mobile App',
-    category: 'Development',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800',
-    description: 'Cross-platform mobile app for productivity tracking.',
+    title: 'KMart',
+    category: 'Digital Marketing',
+    image: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&q=80&w=800',
+    description: 'Strategic digital marketing and online presence management for retail.',
+    icon: <Globe className="w-6 h-6" />
+  },
+  
+  // Web Development Projects
+  {
+    id: 4,
+    title: 'Smart Empire',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+    description: 'Multipurpose company website covering engineering, infrastructure, agro & food, and consultancy services.',
     icon: <Code className="w-6 h-6" />
+  },
+  {
+    id: 5,
+    title: 'VMG Works - Construction',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800',
+    description: 'Comprehensive web platform for construction services, products, and project showcase.',
+    icon: <Code className="w-6 h-6" />
+  },
+  {
+    id: 6,
+    title: 'Display Promotions',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800',
+    description: 'Corporate website showcasing digital marketing and web development services.',
+    icon: <Code className="w-6 h-6" />
+  },
+  {
+    id: 7,
+    title: 'Trip Website',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800',
+    description: 'Travel and tourism platform with booking and itinerary management features.',
+    icon: <Code className="w-6 h-6" />
+  },
+  
+  // App Development Projects
+  {
+    id: 8,
+    title: 'DP CRM + ERP',
+    category: 'App Development',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+    description: 'Integrated CRM and ERP mobile application for business management.',
+    icon: <Smartphone className="w-6 h-6" />
+  },
+  {
+    id: 9,
+    title: 'Grocery Delivery App',
+    category: 'App Development',
+    image: 'https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?auto=format&fit=crop&q=80&w=800',
+    description: 'Mobile app for seamless grocery ordering and delivery management.',
+    icon: <Smartphone className="w-6 h-6" />
   }
 ];
 
@@ -38,7 +91,7 @@ export default function Work() {
     setIsLoaded(true);
   }, []);
 
-  const categories = ['all', 'Web Development', 'Design', 'Development'];
+  const categories = ['all', 'Digital Marketing', 'Web Development', 'App Development'];
 
   const filteredProjects = activeCategory === 'all'
     ? projects
@@ -51,7 +104,6 @@ export default function Work() {
           <h2 className="text-4xl font-bold gradient-text mb-4">Our Work</h2>
           <p className="text-indigo-600 text-lg">Showcasing our best projects</p>
           
-          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mt-8">
             {categories.map((category) => (
               <button

@@ -38,20 +38,20 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="section-container bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+    <section id="testimonials" className="section-container bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl -top-48 -left-48 animate-blob"></div>
-        <div className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl top-48 left-48 animate-blob animation-delay-2000"></div>
-        <div className="absolute w-96 h-96 bg-pink-500/20 rounded-full blur-3xl -bottom-48 -right-48 animate-blob animation-delay-4000"></div>
+        <div className="absolute w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl -top-48 -left-48 animate-blob"></div>
+        <div className="absolute w-96 h-96 bg-purple-200/20 rounded-full blur-3xl top-48 left-48 animate-blob animation-delay-2000"></div>
+        <div className="absolute w-96 h-96 bg-pink-200/20 rounded-full blur-3xl -bottom-48 -right-48 animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 inline-block bg-gradient-to-r from-indigo-200 to-pink-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             What Our Clients Say
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -63,12 +63,12 @@ export default function Testimonials() {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="testimonial-card group backdrop-blur-lg bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20">
-                <Quote className="w-10 h-10 text-indigo-300 mb-4 transform group-hover:scale-110 transition-transform duration-300" />
-                <p className="text-white/90 mb-6 relative z-10">"{testimonial.text}"</p>
+              <div className="testimonial-card group bg-white/80 hover:bg-white/90 border border-indigo-100">
+                <Quote className="w-10 h-10 text-indigo-500 mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                <p className="text-indigo-950/80 mb-6 relative z-10">"{testimonial.text}"</p>
                 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 ring-2 ring-indigo-400 group-hover:ring-pink-400 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 ring-2 ring-indigo-400 group-hover:ring-purple-400 transition-all duration-300">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -76,10 +76,10 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-white group-hover:text-pink-200 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-indigo-950 group-hover:text-indigo-600 transition-colors duration-300">
                       {testimonial.name}
                     </h4>
-                    <p className="text-indigo-200 group-hover:text-pink-200 transition-colors duration-300">
+                    <p className="text-indigo-600/80">
                       {testimonial.company}
                     </p>
                   </div>
@@ -87,7 +87,7 @@ export default function Testimonials() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transform group-hover:scale-110 transition-all duration-300"
+                        className="w-5 h-5 text-yellow-500 group-hover:text-yellow-400 transform group-hover:scale-110 transition-all duration-300"
                         fill="currentColor"
                       />
                     ))}
