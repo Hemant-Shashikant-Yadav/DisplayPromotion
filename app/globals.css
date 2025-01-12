@@ -8,27 +8,37 @@
   --light-blue: #7dd3fc;
   --lighter-blue: #e0f2fe;
   --dark-blue: #0284c7;
+  --navbar-height: 4rem;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
-.scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
-.scroll-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+/* Main container styles */
+.main-container {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section styles */
+.section-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
+  scroll-margin-top: var(--navbar-height);
 }
 
+/* Utility classes */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-500 animate-gradient;
 }
@@ -54,4 +64,31 @@ html {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 4s ease infinite;
+}
+
+/* Carousel styles */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .embla__slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 33.33%;
+  }
 }
