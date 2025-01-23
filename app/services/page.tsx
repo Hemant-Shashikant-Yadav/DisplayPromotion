@@ -38,7 +38,6 @@ const services = [
     title: "Digital Marketing",
     description: `Transform your online presence with our data-driven digital marketing strategies. We combine SEO, content marketing, and paid advertising to drive growth and increase your ROI.`,
     features: [
-      "Search Engine Optimization (SEO)",
       "Pay-Per-Click (PPC) advertising",
       "Content marketing strategy",
       "Email marketing campaigns",
@@ -71,7 +70,6 @@ const services = [
       "Email template design",
       "Automated email sequences",
       "List segmentation and management",
-      "A/B testing and optimization",
       "Campaign performance analysis",
     ],
     image:
@@ -86,7 +84,6 @@ const services = [
       "Custom website development",
       "Mobile app development",
       "E-commerce solutions",
-      "UI/UX design",
       "Maintenance and support",
     ],
     image:
