@@ -160,15 +160,19 @@ export default function ContactPage() {
                   Meet Our Founder
                 </h2>
                 <h3 className="text-xl font-semibold text-indigo-950 mb-2">
-                  John Smith
+                  Prathamesh Dhapate
                 </h3>
                 <p className="text-indigo-600 mb-6">CEO & Founder</p>
                 <p className="text-lg text-indigo-950/80 mb-8">
-                  With over 15 years of experience in digital marketing and
-                  technology, John has led Display Promotions to become a
-                  leading force in the digital marketing industry. His vision
-                  and innovative approach have helped countless businesses
-                  achieve their digital transformation goals.
+                  Hi, I'm Prathmesh Govind Dhapte, the founder of this company.
+                  My journey began at an Autonomous Engineering Institute, where
+                  I explored my passions through Public Speaking, anchoring, and
+                  connecting with people, and took a deep dive into magazine
+                  publication. Serving as a class representative and
+                  participating in leadership programs helped me develop strong
+                  communication and decision-making skills. These experiences
+                  have shaped me into a dedicated leader, committed to driving
+                  innovation and excellence in everything we do at our company.
                 </p>
                 <div className="flex gap-4">
                   <a
